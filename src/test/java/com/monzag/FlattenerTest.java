@@ -7,10 +7,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class FlattenerTest {
 
+    private Flattener flattener;
+
+    @BeforeEach
+    void setup() {
+        flattener = new Flattener();
+    }
+    
     @Test
     void testConstructor() {
         Flattener flattener = new Flattener();
     }
-
-
 }
