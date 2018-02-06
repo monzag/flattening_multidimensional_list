@@ -3,6 +3,7 @@ package com.monzag;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -42,7 +43,6 @@ class FlattenerTest {
         assertEquals(expect, actual);
     }
 
-
     private void addNumbersAndStringsToItems() {
         items.add(1);
         items.add("Test");
@@ -53,5 +53,20 @@ class FlattenerTest {
         addNumbersAndStringsToItems();
         Integer[] years = {1997, 2015};
         items.add(years);
+    }
+    
+    private void create3DList() {
+        create2DList();
+
+        LinkedList<Object> names = new LinkedList<>();
+        names.add("Ala");
+        names.add("Janusz");
+        items.add(names);
+
+        ArrayList<String> address = new ArrayList<>();
+        address.add("London");
+        address.add("Warsaw");
+        address.add("Berlin");
+        names.add(address);
     }
 }
