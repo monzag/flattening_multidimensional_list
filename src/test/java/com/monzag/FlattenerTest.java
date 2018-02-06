@@ -43,6 +43,14 @@ class FlattenerTest {
         assertEquals(expect, actual);
     }
 
+    @Test
+    void testFlattening3DList() {
+        create3DList();
+        String expect = "[1, Test, 20.1, 1997, 2015, Ana, John, London, Warsaw, Paris]";
+        String actual = flattener.flatteningMultiDList(items, items1D).toString();
+        assertEquals(expect, actual);
+    }
+
 
     private void addNumbersAndStringsToItems() {
         items.add(1);
