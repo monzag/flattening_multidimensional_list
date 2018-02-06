@@ -43,6 +43,7 @@ class FlattenerTest {
         assertEquals(expect, actual);
     }
 
+
     private void addNumbersAndStringsToItems() {
         items.add(1);
         items.add("Test");
@@ -54,19 +55,19 @@ class FlattenerTest {
         Integer[] years = {1997, 2015};
         items.add(years);
     }
-    
+
     private void create3DList() {
         create2DList();
 
         LinkedList<Object> names = new LinkedList<>();
-        names.add("Ala");
-        names.add("Janusz");
+        names.add("Ana");
+        names.add("John");
         items.add(names);
 
         ArrayList<String> address = new ArrayList<>();
         address.add("London");
         address.add("Warsaw");
-        address.add("Berlin");
+        address.add("Paris");
         names.add(address);
     }
 }
