@@ -35,4 +35,15 @@ class FlattenerTest {
         String actual = flattener.flatteningMultiDList(items, items1D).toString();
         assertEquals(expect, actual);
     }
+
+    @Test
+    void testFlattening2DList() {
+        items.add(1);
+        items.add("Test");
+        Integer[] years = {1997, 2015};
+        items.add(years);
+        String expect = "[1, Test, 1997, 2015]";
+        String actual = flattener.flatteningMultiDList(items, items1D).toString();
+        assertEquals(expect, actual);
+    }
 }
